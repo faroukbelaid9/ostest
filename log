@@ -158,4 +158,30 @@ Linux Ubuntu 6.11.0-21-generic #21~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Feb 24
     Sat Mar 29 09:29:52 AM UTC 2025  
     /run/snapd-snap.socket
 
-Напишем скрипт:
+  Cкрипт:
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ vi task1.sh
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ chmod +x task1.sh 
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ ./task1.sh 
+    Usage: ./task1.sh <output_file>
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ ./task1.sh test1.txt
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ cat test1.txt 
+    Обычный файл:
+    /home/farouk/Desktop/labs/Farouk_Belaid_lb1/config-6.11.0-21-generic
+
+    Специальный файл блочного устройства:
+    /home/farouk/Desktop/labs/Farouk_Belaid_lb1/loop0
+
+    Файл символьного устройства:
+    /home/farouk/Desktop/labs/Farouk_Belaid_lb1/autofs
+
+    Директория:
+    /home/farouk/Desktop/labs/Farouk_Belaid_lb1/bin.usr-is-merged
+
+    Символьная ссылка:
+    /home/farouk/Desktop/labs/Farouk_Belaid_lb1/usr/bin
+
+    FIFO (named pipe):
+    /home/farouk/Desktop/labs/Farouk_Belaid_lb1/initctl
+
+    Сокет:
+    /home/farouk/Desktop/labs/Farouk_Belaid_lb1/snapd-snap.socket
