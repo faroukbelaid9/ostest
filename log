@@ -433,4 +433,13 @@ farouk@Ubuntu:~$ ls -l /home/farouk/symboliclink_2.txt
 lrwxrwxrwx 1 farouk farouk 22 Mar 29 12:41 /home/farouk/symboliclink_2.txt -> /home/farouk/task3.txt
 
 Cкрипт:
+farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ vi task3.sh 
+farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ chmod +x task3.sh
+farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ ./task3.sh /home/farouk/task3.txt 
+  Searching for symbolic links pointing to: /home/farouk/task3.txt
+  [1] Found symlink: /home/farouk/symboliclink_3.txt
+  [2] Found symlink: /home/farouk/symboliclink_2.txt
+  [3] Found symlink: /home/farouk/symboliclink_1.txt
+  Total symbolic links found: 3
 
+# Задание 4:
