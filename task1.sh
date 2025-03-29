@@ -18,7 +18,7 @@ record_file_type() {
     
     if [[ -n "$match" ]]; then
         local filename=$(awk '{print $NF}' <<< "$match")
-        echo "${description}: " >> "${current_dir}/${filename}" >> "$output_file"
+        echo "${description}: \n${current_dir}/${filename}" >> "$output_file"
     else
         echo "${description}: Not found" >> "$output_file"
     fi
