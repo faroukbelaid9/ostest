@@ -443,3 +443,16 @@ farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ ./task3.sh /home/farouk/task3.tx
   Total symbolic links found: 3
 
 # Задание 4:
+
+1 using ls и grep
+farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ ls -lR ~/ | grep " -> /home/farouk/task3.txt"
+lrwxrwxrwx 1 farouk farouk   22 Mar 29 12:37 symboliclink_1.txt -> /home/farouk/task3.txt
+lrwxrwxrwx 1 farouk farouk   22 Mar 29 12:41 symboliclink_2.txt -> /home/farouk/task3.txt
+lrwxrwxrwx 1 farouk farouk   22 Mar 29 12:43 symboliclink_3.txt -> /home/farouk/task3.txt
+
+2 using find -lname
+farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ find ~/ -type l -lname "/home/farouk/task3.txt"
+/home/farouk/symboliclink_3.txt
+/home/farouk/symboliclink_2.txt
+/home/farouk/symboliclink_1.txt
+
