@@ -395,6 +395,7 @@ Linux Ubuntu 6.11.0-21-generic #21~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Feb 24
     /home/farouk/Desktop/labs/Farouk_Belaid_lb1/snapd-snap.socket
 
 # Задание 2:
+
   Cкрипт:
   farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ vi task2.sh
   farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ chmod +x task2.sh
