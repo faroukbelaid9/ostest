@@ -18,7 +18,7 @@ record_file_type() {
     
     if [[ -n "$match" ]]; then
         local filename=$(awk '{print $NF}' <<< "$match")
-        echo "${description}: ${current_dir}/${filename}" >> "$output_file"
+        echo "${description}: >> ${current_dir}/${filename}" >> "$output_file"
     else
         echo "${description}: Not found" >> "$output_file"
     fi
@@ -26,13 +26,13 @@ record_file_type() {
 
 # Main processing
 {
-    record_file_type '-' "Regular file"
-    record_file_type 'b' "Block device file"
-    record_file_type 'c' "Character device file"
-    record_file_type 'd' "Directory"
-    record_file_type 'l' "Symbolic link"
+    record_file_type '-' "Обычный файл"
+    record_file_type 'b' "Специальный файл блочного устройства"
+    record_file_type 'c' "Файл символьного устройства"
+    record_file_type 'd' "Директория"
+    record_file_type 'l' "Символьная ссылка"
     record_file_type 'p' "FIFO (named pipe)"
-    record_file_type 's' "Socket file"
+    record_file_type 's' "Сокет"
 } || {
     echo "Error occurred during file search" >&2
     exit 1
