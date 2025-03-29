@@ -305,7 +305,7 @@ farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && uname -a
 Sat Mar 29 09:02:53 AM UTC 2025
 Linux Ubuntu 6.11.0-21-generic #21~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Feb 24 16:52:15 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
 
-# Задание 1
+# Задание 1:
 
   Обычный файл:
   farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && ls -lR / 2>/dev/null | grep "^-" | head -n 1
@@ -393,3 +393,19 @@ Linux Ubuntu 6.11.0-21-generic #21~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Feb 24
 
     Сокет:
     /home/farouk/Desktop/labs/Farouk_Belaid_lb1/snapd-snap.socket
+
+# Задание 2:
+  Cкрипт:
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ vi task2.sh
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ chmod +x task2.sh
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && ./task2.sh task2.txt 
+    Sat Mar 29 11:46:44 AM UTC 2025
+    Found hard links for 'task2.txt' (inode 4467033):
+    ----------------------------------------
+    hard_link2.txt
+    hard_link1.txt
+    hard_link3.txt
+    ----------------------------------------
+    Search completed
+
+# Задание 3:
