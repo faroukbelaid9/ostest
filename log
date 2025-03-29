@@ -1,0 +1,161 @@
+Belaid Farouk 3342
+
+farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date
+Sat Mar 29 08:47:24 AM UTC 2025
+
+farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && whoami
+Sat Mar 29 08:56:10 AM UTC 2025
+farouk
+
+farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && tty
+Sat Mar 29 08:56:33 AM UTC 2025
+/dev/pts/0
+
+farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && lscpu
+Sat Mar 29 08:57:05 AM UTC 2025
+Architecture:             x86_64
+  CPU op-mode(s):         32-bit, 64-bit
+  Address sizes:          48 bits physical, 48 bits virtual
+  Byte Order:             Little Endian
+CPU(s):                   4
+  On-line CPU(s) list:    0-3
+Vendor ID:                AuthenticAMD
+  Model name:             AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx
+    CPU family:           23
+    Model:                24
+    Thread(s) per core:   1
+    Core(s) per socket:   4
+    Socket(s):            1
+    Stepping:             1
+    BogoMIPS:             4192.12
+    Flags:                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge m
+                          ca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall
+                           nx mmxext fxsr_opt rdtscp lm constant_tsc rep_good no
+                          pl nonstop_tsc cpuid extd_apicid tsc_known_freq pni pc
+                          lmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popc
+                          nt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_le
+                          gacy cr8_legacy abm sse4a misalignsse 3dnowprefetch ss
+                          bd vmmcall fsgsbase bmi1 avx2 bmi2 rdseed adx clflusho
+                          pt sha_ni arat
+Virtualization features:  
+  Hypervisor vendor:      KVM
+  Virtualization type:    full
+Caches (sum of all):      
+  L1d:                    128 KiB (4 instances)
+  L1i:                    256 KiB (4 instances)
+  L2:                     2 MiB (4 instances)
+  L3:                     16 MiB (4 instances)
+NUMA:                     
+  NUMA node(s):           1
+  NUMA node0 CPU(s):      0-3
+Vulnerabilities:          
+  Gather data sampling:   Not affected
+  Itlb multihit:          Not affected
+  L1tf:                   Not affected
+  Mds:                    Not affected
+  Meltdown:               Not affected
+  Mmio stale data:        Not affected
+  Reg file data sampling: Not affected
+  Retbleed:               Mitigation; untrained return thunk; SMT disabled
+  Spec rstack overflow:   Vulnerable: Safe RET, no microcode
+  Spec store bypass:      Not affected
+  Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointe
+                          r sanitization
+  Spectre v2:             Mitigation; Retpolines; STIBP disabled; RSB filling; P
+                          BRSB-eIBRS Not affected; BHI Not affected
+  Srbds:                  Not affected
+  Tsx async abort:        Not affected
+
+farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && lshw | head -n 19
+Sat Mar 29 08:59:41 AM UTC 2025
+WARNING: you should run this program as super-user.
+ubuntu                      
+    description: Computer
+    width: 64 bits
+    capabilities: smp vsyscall32
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-memory
+          description: System memory
+          physical id: 0
+          size: 9728MiB
+     *-cpu
+          product: AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx
+          vendor: Advanced Micro Devices [AMD]
+          physical id: 1
+          bus info: cpu@0
+          version: 23.24.1
+          width: 64 bits
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp x86-64 constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch ssbd vmmcall fsgsbase bmi1 avx2 bmi2 rdseed adx clflushopt sha_ni arat
+
+farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && sudo dmidecode -s system-product-name
+Sat Mar 29 09:01:49 AM UTC 2025
+VirtualBox
+
+farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && uname -a
+Sat Mar 29 09:02:53 AM UTC 2025
+Linux Ubuntu 6.11.0-21-generic #21~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Feb 24 16:52:15 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+
+# Задание 1
+
+  Обычный файл:
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && ls -lR / 2>/dev/null | grep "^-" | head -n 1
+    Sat Mar 29 09:11:33 AM UTC 2025
+    -rw-r--r-- 1 root root   292033 Feb 24 15:23 config-6.11.0-21-generic
+
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && find / -name "swapfile" 2>/dev/null | head -n 1
+    Sat Mar 29 09:13:03 AM UTC 2025
+    /snap/core22/1564/etc/default/swapfile
+  
+  Файл блочного устройства:
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && ls -lR / 2>/dev/null | grep "^b" | head -n 1
+    Sat Mar 29 09:15:25 AM UTC 2025
+    brw-rw----  1 root   disk      7,   0 Mar 29 08:42 loop0
+  
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && find / -name "loop0" 2>/dev/null | head -n 1
+    Sat Mar 29 09:16:17 AM UTC 2025
+    /sys/class/block/loop0
+
+  Файл символьного устройства:
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && ls -lR / 2>/dev/null | grep "^c" | head -n 1
+    Sat Mar 29 09:20:47 AM UTC 2025
+    crw-r--r--  1 root   root     10, 235 Mar 29 08:42 autofs
+
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && find / -name "autofs" 2>/dev/null | head -n 1
+    Sat Mar 29 09:21:26 AM UTC 2025
+    /sys/class/misc/autofs
+
+  Файл директории:
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && ls -lR / 2>/dev/null | grep "^d" | head -n 1
+    Sat Mar 29 09:22:13 AM UTC 2025
+    drwxr-xr-x   2 root root  4096 Feb 26  2024 bin.usr-is-merged
+
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && find / -name "boot" 2>/dev/null | head -n 1
+    Sat Mar 29 09:22:47 AM UTC 2025
+    /boot
+
+  Символьная ссылка:
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && ls -lR / 2>/dev/null | grep "^l" | head -n 1
+    Sat Mar 29 09:23:39 AM UTC 2025
+    lrwxrwxrwx   1 root root     7 Apr 22  2024 bin -> usr/bin
+
+  FIFO:
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && ls -lR / 2>/dev/null | grep "^p" | head -n 1
+    Sat Mar 29 09:24:40 AM UTC 2025
+    prw-------  1 root              root      0 Mar 29 08:42 initctl
+
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && find / -name "initctl" 2>/dev/null | head -n 1
+    Sat Mar 29 09:25:33 AM UTC 2025
+    /run/initctl
+
+  Сокет:
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && ls -lR / 2>/dev/null | grep "^s" | head -n 1
+    Sat Mar 29 09:26:09 AM UTC 2025
+    srw-rw-rw-  1 root              root      0 Mar 29 08:42 snapd-snap.socket
+
+  farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && find / -name "snapd-snap.socket" 2>/dev/null | head -n 1
+    Sat Mar 29 09:29:52 AM UTC 2025  
+    /run/snapd-snap.socket
+
+Напишем скрипт:
