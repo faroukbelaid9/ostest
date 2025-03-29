@@ -400,12 +400,12 @@ Linux Ubuntu 6.11.0-21-generic #21~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Feb 24
   farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ vi task2.sh
   farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ chmod +x task2.sh
   farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ date && ./task2.sh task2.txt 
-    Sat Mar 29 11:46:44 AM UTC 2025
-    Found hard links for 'task2.txt' (inode 4467033):
+    Sat Mar 29 11:53:54 AM UTC 2025
+    Found hard links for 'task2.txt' (inode 4467019):
     ----------------------------------------
-    hard_link2.txt
-    hard_link1.txt
-    hard_link3.txt
+    hardlink3.txt
+    hardlink2.txt
+    hardlink1.txt
     ----------------------------------------
     Search completed
 
