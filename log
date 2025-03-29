@@ -410,3 +410,27 @@ Linux Ubuntu 6.11.0-21-generic #21~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Feb 24
     Search completed
 
 # Задание 3:
+
+farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ echo "This is the file content" > task3.txt
+
+command ln -s:
+farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ ln -s /home/farouk/task3.txt /home/farouk/Downloads/symboliclink1.txt
+
+command cp -s:
+farouk@Ubuntu:~/Desktop/labs/Farouk_Belaid_lb1$ cp -s task3.txt symboliclink2.txt
+
+command link:
+The link command is used to create hard links, but not symbolic links.
+
+Another symbolic link:
+farouk@Ubuntu:~$ ln -s /home/farouk/task3.txt /home/farouk/symboliclink_3.txt
+
+Link check:
+farouk@Ubuntu:~$ ls -l /home/farouk/symboliclink_1.txt
+lrwxrwxrwx 1 farouk farouk 22 Mar 29 12:37 /home/farouk/symboliclink_1.txt -> /home/farouk/task3.txt
+
+farouk@Ubuntu:~$ ls -l /home/farouk/symboliclink_2.txt
+lrwxrwxrwx 1 farouk farouk 22 Mar 29 12:41 /home/farouk/symboliclink_2.txt -> /home/farouk/task3.txt
+
+Cкрипт:
+
