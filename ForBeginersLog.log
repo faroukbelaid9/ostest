@@ -728,3 +728,43 @@ farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ps -A
 
 Task 3:
 
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ gcc prog.c -o prog.o
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ls
+ForBeginersLog.log  path  prog.c  prog.o  renamed-file.txt
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ gcc prog.c -o prog
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ls
+ForBeginersLog.log  path  prog  prog.c  prog.o  renamed-file.txt
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ./prog
+Hello, everybody ! 
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ./prog > res
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ cat res
+Hello, everybody ! 
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ gcc my_open.c -o my_open
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ./my_open 
+открываемый файл не указан
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ./my_open renamed-file.txt 
+./my_open: файл renamed-file.txt открыт
+
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ touch file.name.c
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ gcc file_name.c -o file_name
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ./file_name || ./my_open
+renamed-file.txt
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ./file_name || ./new_open
+renamed-file.txt
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ./file_name | ./new_open
+./new_open: successfully opened renamed-file.txt
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ./file_name && ./new_open
+renamed-file.txt
+renamed-file.txt
+./new_open: successfully opened renamed-file.txt
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ 
+
