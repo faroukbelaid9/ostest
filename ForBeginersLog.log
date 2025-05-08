@@ -1,0 +1,730 @@
+ОТЧЁТ ПО ЛАБОРАТОРНОЙ РАБОТЕ For_Beginers
+
+Дата: 2025-05-08 11:02:03
+ФИО: Белаид Фарук
+Группа: 3342
+
+
+Task 1:
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ touch ForBeginersLog.log
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ls
+ForBeginersLog.log
+
+Task 2:
+2.1 & 2.2)
+
+# вывод текущей даты (Shows current date)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ date
+Thu May  8 11:00:14 AM UTC 2025
+
+# кто находится в системе; (who is in the system)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ who
+farouk   seat0        2025-05-08 10:21 (login screen)
+farouk   tty2         2025-05-08 10:21 (tty2)
+
+# выведите имя пользователя текущего пользователя (print the username of the current user)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ whoami
+farouk
+
+# полное имя файла-терминала (full name of the terminal file)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ tty
+/dev/pts/0
+
+# входное имя (display the login name of the current logged in user)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ logname
+farouk
+
+# имя  UNIX-системы  ("имя компьютера") (UNIX system name ("computer name"))
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ uname
+Linux
+
+# информация о процессорах/ядрах компьютера или виртуальной машины (information about the processors/cores of a computer or virtual machine)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ lscpu
+Architecture:             x86_64
+  CPU op-mode(s):         32-bit, 64-bit
+  Address sizes:          48 bits physical, 48 bits virtual
+  Byte Order:             Little Endian
+CPU(s):                   4
+  On-line CPU(s) list:    0-3
+Vendor ID:                AuthenticAMD
+  Model name:             AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx
+    CPU family:           23
+    Model:                24
+    Thread(s) per core:   1
+    Core(s) per socket:   4
+    Socket(s):            1
+    Stepping:             1
+    BogoMIPS:             4192.12
+    Flags:                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht sy
+                          scall nx mmxext fxsr_opt rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid tsc_known_f
+                          req pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor
+                           lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch ssbd vmmcall fsgsbase bmi1 avx2 bmi2
+                           rdseed adx clflushopt sha_ni arat
+Virtualization features:  
+  Hypervisor vendor:      KVM
+  Virtualization type:    full
+Caches (sum of all):      
+  L1d:                    128 KiB (4 instances)
+  L1i:                    256 KiB (4 instances)
+  L2:                     2 MiB (4 instances)
+  L3:                     16 MiB (4 instances)
+NUMA:                     
+  NUMA node(s):           1
+  NUMA node0 CPU(s):      0-3
+Vulnerabilities:          
+  Gather data sampling:   Not affected
+  Itlb multihit:          Not affected
+  L1tf:                   Not affected
+  Mds:                    Not affected
+  Meltdown:               Not affected
+  Mmio stale data:        Not affected
+  Reg file data sampling: Not affected
+  Retbleed:               Mitigation; untrained return thunk; SMT disabled
+  Spec rstack overflow:   Vulnerable: Safe RET, no microcode
+  Spec store bypass:      Not affected
+  Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:             Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+  Srbds:                  Not affected
+  Tsx async abort:        Not affected
+
+
+# информация о периферийном оборудовании (display detailed information on the system's hardware configuration from various files in the /proc directory in the system.)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ lshw
+WARNING: you should run this program as super-user.
+ubuntu                      
+    description: Computer
+    width: 64 bits
+    capabilities: smp vsyscall32
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-memory
+          description: System memory
+          physical id: 0
+          size: 9728MiB
+     *-cpu
+          product: AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx
+          vendor: Advanced Micro Devices [AMD]
+          physical id: 1
+          bus info: cpu@0
+          version: 23.24.1
+          width: 64 bits
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp x86-64 constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch ssbd vmmcall fsgsbase bmi1 avx2 bmi2 rdseed adx clflushopt sha_ni arat
+          configuration: microcode=135299337
+     *-pci
+          description: Host bridge
+          product: 440FX - 82441FX PMC [Natoma]
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+        *-isa
+             description: ISA bridge
+             product: 82371SB PIIX3 ISA [Natoma/Triton II]
+             vendor: Intel Corporation
+             physical id: 1
+             bus info: pci@0000:00:01.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master
+             configuration: latency=0
+           *-pnp00:00
+                product: PnP device PNP0303
+                physical id: 0
+                capabilities: pnp
+                configuration: driver=i8042 kbd
+           *-pnp00:01
+                product: PnP device PNP0f03
+                physical id: 1
+                capabilities: pnp
+                configuration: driver=i8042 aux
+        *-ide
+             description: IDE interface
+             product: 82371AB/EB/MB PIIX4 IDE
+             vendor: Intel Corporation
+             physical id: 1.1
+             bus info: pci@0000:00:01.1
+             logical name: scsi1
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ide isa_compat_mode pci_native_mode bus_master emulated
+             configuration: driver=ata_piix latency=64
+             resources: irq:0 ioport:1f0(size=8) ioport:3f6 ioport:170(size=8) ioport:376 ioport:d000(size=16)
+           *-cdrom
+                description: DVD reader
+                product: CD-ROM
+                vendor: VBOX
+                physical id: 0.0.0
+                bus info: scsi@1:0.0.0
+                logical name: /dev/cdrom
+                logical name: /dev/sr0
+                logical name: /media/farouk/VBox_GAs_7.1.6
+                version: 1.0
+                capabilities: removable audio dvd
+                configuration: ansiversion=5 mount.fstype=iso9660 mount.options=ro,nosuid,nodev,relatime,nojoliet,check=s,map=n,blocksize=2048,uid=1000,gid=1000,dmode=500,fmode=400,iocharset=utf8 state=mounted status=ready
+              *-medium
+                   physical id: 0
+                   logical name: /dev/cdrom
+                   logical name: /media/farouk/VBox_GAs_7.1.6
+                   configuration: mount.fstype=iso9660 mount.options=ro,nosuid,nodev,relatime,nojoliet,check=s,map=n,blocksize=2048,uid=1000,gid=1000,dmode=500,fmode=400,iocharset=utf8 state=mounted
+        *-display
+             description: VGA compatible controller
+             product: SVGA II Adapter
+             vendor: VMware
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             logical name: /dev/fb0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: vga_controller bus_master rom fb
+             configuration: depth=32 driver=vmwgfx latency=64 resolution=1280,800
+             resources: irq:18 ioport:d010(size=16) memory:e0000000-e0ffffff memory:f0000000-f01fffff memory:c0000-dffff
+        *-network
+             description: Ethernet interface
+             product: 82540EM Gigabit Ethernet Controller
+             vendor: Intel Corporation
+             physical id: 3
+             bus info: pci@0000:00:03.0
+             logical name: enp0s3
+             version: 02
+             serial: 08:00:27:20:5c:5a
+             size: 1Gbit/s
+             capacity: 1Gbit/s
+             width: 32 bits
+             clock: 66MHz
+             capabilities: bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+             configuration: autonegotiation=on broadcast=yes driver=e1000 driverversion=6.11.0-24-generic duplex=full ip=10.0.2.15 latency=64 link=yes mingnt=255 multicast=yes port=twisted pair speed=1Gbit/s
+             resources: irq:19 memory:f0200000-f021ffff ioport:d020(size=8)
+        *-generic
+             description: System peripheral
+             product: VirtualBox mouse integration
+             vendor: InnoTek Systemberatung GmbH
+             physical id: 4
+             bus info: pci@0000:00:04.0
+             logical name: input8
+             logical name: /dev/input/event6
+             logical name: /dev/input/js1
+             logical name: /dev/input/mouse2
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci
+             configuration: driver=vboxguest latency=0
+             resources: irq:20 ioport:d040(size=32) memory:f0400000-f07fffff memory:f0800000-f0803fff
+        *-multimedia
+             description: Multimedia audio controller
+             product: 82801AA AC'97 Audio Controller
+             vendor: Intel Corporation
+             physical id: 5
+             bus info: pci@0000:00:05.0
+             logical name: card0
+             logical name: /dev/snd/controlC0
+             logical name: /dev/snd/pcmC0D0c
+             logical name: /dev/snd/pcmC0D0p
+             logical name: /dev/snd/pcmC0D1c
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bus_master
+             configuration: driver=snd_intel8x0 latency=64
+             resources: irq:21 ioport:d100(size=256) ioport:d200(size=64)
+        *-usb:0
+             description: USB controller
+             product: KeyLargo/Intrepid USB
+             vendor: Apple Inc.
+             physical id: 6
+             bus info: pci@0000:00:06.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ohci bus_master cap_list
+             configuration: driver=ohci-pci latency=64
+             resources: irq:22 memory:f0804000-f0804fff
+        *-bridge
+             description: Bridge
+             product: 82371AB/EB/MB PIIX4 ACPI
+             vendor: Intel Corporation
+             physical id: 7
+             bus info: pci@0000:00:07.0
+             version: 08
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bridge
+             configuration: driver=piix4_smbus latency=0
+             resources: irq:9
+        *-usb:1
+             description: USB controller
+             product: 82801FB/FBM/FR/FW/FRW (ICH6 Family) USB2 EHCI Controller
+             vendor: Intel Corporation
+             physical id: b
+             bus info: pci@0000:00:0b.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ehci bus_master cap_list
+             configuration: driver=ehci-pci latency=64
+             resources: irq:19 memory:f0805000-f0805fff
+        *-sata
+             description: SATA controller
+             product: 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]
+             vendor: Intel Corporation
+             physical id: d
+             bus info: pci@0000:00:0d.0
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: sata ahci_1.0 bus_master cap_list
+             configuration: driver=ahci latency=64
+             resources: irq:21 ioport:d240(size=8) ioport:d248(size=4) ioport:d250(size=8) ioport:d258(size=4) ioport:d260(size=16) memory:f0806000-f0807fff
+  *-input:0
+       product: Power Button
+       physical id: 1
+       logical name: input0
+       logical name: /dev/input/event0
+       capabilities: platform
+  *-input:1
+       product: Sleep Button
+       physical id: 2
+       logical name: input1
+       logical name: /dev/input/event1
+       capabilities: platform
+  *-input:2
+       product: AT Translated Set 2 keyboard
+       physical id: 3
+       logical name: input2
+       logical name: /dev/input/event2
+       logical name: input2::capslock
+       logical name: input2::numlock
+       logical name: input2::scrolllock
+       capabilities: i8042
+  *-input:3
+       product: Video Bus
+       physical id: 4
+       logical name: input4
+       logical name: /dev/input/event3
+       capabilities: platform
+  *-input:4
+       product: ImExPS/2 Generic Explorer Mouse
+       physical id: 5
+       logical name: input5
+       logical name: /dev/input/event4
+       logical name: /dev/input/mouse0
+       capabilities: i8042
+  *-input:5
+       product: VirtualBox USB Tablet
+       physical id: 6
+       logical name: input6
+       logical name: /dev/input/event5
+       logical name: /dev/input/js0
+       logical name: /dev/input/mouse1
+       capabilities: usb
+WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
+
+
+2.3)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ man date
+DATE(1)                                                 User Commands                                                 DATE(1)
+
+NAME
+       date - print or set the system date and time
+
+SYNOPSIS
+       date [OPTION]... [+FORMAT]
+       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+
+DESCRIPTION
+       Display date and time in the given FORMAT.  With -s, or with [MMDDhhmm[[CC]YY][.ss]], set the date and time.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -d, --date=STRING
+              display time described by STRING, not 'now'
+
+       --debug
+              annotate the parsed date, and warn about questionable usage to stderr
+
+       -f, --file=DATEFILE
+              like --date; once for each line of DATEFILE
+
+       -I[FMT], --iso-8601[=FMT]
+              output date/time in ISO 8601 format.  FMT='date' for date only (the default), 'hours', 'minutes', 'seconds', or
+              'ns' for date and time to the indicated precision.  Example: 2006-08-14T02:34:56-06:00
+
+       --resolution
+              output the available resolution of timestamps Example: 0.000000001
+
+       -R, --rfc-email
+.....
+
+2.3)
+
+# Создание базового каталога (Basic directory creation)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ mkdir path
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ mkdir path/new/
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ mkdir path/new/directorey
+
+# Создание родительских каталогов (Create parent directories)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ mkdir -p path/multi-level
+
+# Устанавливайте разрешения при создании (например, 755) (Set permissions while creating (e.g., 755))
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ mkdir -m 755 path/dir-with-permissions
+
+2.4) a)
+
+# выведите содержимое каждого указанного параметра каталога или имя каждого указанного параметра файла( output the contents of each specified Directory parameter or the name of each specified File parameter)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ls
+ForBeginersLog.log  path
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ls path/
+dir-with-permissions  multi-level  new
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ls -l path/
+total 12
+drwxr-xr-x 2 farouk farouk 4096 May  8 11:36 dir-with-permissions
+drwxrwxr-x 2 farouk farouk 4096 May  8 11:35 multi-level
+drwxrwxr-x 3 farouk farouk 4096 May  8 11:34 new
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ls ForBeginersLog.log path/
+ForBeginersLog.log
+
+path/:
+dir-with-permissions  multi-level  new
+
+2.4) b)
+# отобразить содержимое файла (display the file content)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ cat ForBeginersLog.log 
+Lab for beginners
+
+# отобразить содержимое файла (display the file content)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ cat test.txt 
+Hello World!
+
+# отобразить содержимое обоих файлов (display the file content for both files)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ cat ForBeginersLog.log test.txt 
+Lab for beginners
+Hello World!
+
+2.4) c)
+
+# переименовать имя файла (rename file name)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ mv test.txt renamed-file.txt
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ls
+ForBeginersLog.log  path  renamed-file.txt
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ cat test.txt
+cat: test.txt: No such file or directory
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ cat renamed-file.txt 
+Hello World!
+
+# скопировать файл (copy a file)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ cp renamed-file.txt copied-file.txt 
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ls
+copied-file.txt  ForBeginersLog.log  path  renamed-file.txt
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ cat copied-file.txt 
+Hello World!
+
+# удалить файл (remove a file)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ rm copied-file.txt 
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ls
+ForBeginersLog.log  path  renamed-file.txt
+
+2.5)
+
+# показать полный текущий путь (show the full current path)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ pwd
+/home/farouk/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ls prog.c 
+prog.c
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ls
+ForBeginersLog.log  path  prog.c  renamed-file.txt
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ls -l
+total 12
+-rw-rw-r-- 1 farouk farouk   18 May  8 11:48 ForBeginersLog.log
+drwxrwxr-x 5 farouk farouk 4096 May  8 11:36 path
+-rw-rw-r-- 1 farouk farouk    0 May  8 12:06 prog.c
+-rw-rw-r-- 1 farouk farouk   13 May  8 11:49 renamed-file.txt
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342$ cd ..
+farouk@Ubuntu:~/Desktop/OS-LABS$ cd ..
+farouk@Ubuntu:~/Desktop$ cd ..
+farouk@Ubuntu:~$ cd ..
+farouk@Ubuntu:/home$ cd ..
+farouk@Ubuntu:/$ cd ..
+farouk@Ubuntu:/$ ls
+bin                boot   dev  home  lib64              lost+found  mnt  proc  run   sbin.usr-is-merged  srv  tmp  var
+bin.usr-is-merged  cdrom  etc  lib   lib.usr-is-merged  media       opt  root  sbin  snap                sys  usr
+
+# determine the owners of the / , /bin
+farouk@Ubuntu:/$ ls -ld /
+drwxr-xr-x 23 root root 4096 Mar 29 08:14 /
+farouk@Ubuntu:/$ ls -ld /bin
+lrwxrwxrwx 1 root root 7 Apr 22  2024 /bin -> usr/bin
+
+# Изменение содержимого каталогов / (root) или /bin в Linux возможно, но для этого требуются права суперпользователя (администратора)
+# Modifying the contents of the / (root) or /bin directories in Linux is possible, but it requires root (administrative) privileges 
+
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ls
+ForBeginersLog.log  path  prog.c  renamed-file.txt
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ mkdir sub-dir
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ cd sub-dir/
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners/sub-dir$ cp ../prog.c /
+cp: cannot create regular file '/prog.c': Permission denied
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners/sub-dir$ cp ../prog.c ./
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners/sub-dir$ ls
+prog.c
+
+# removing non-empty dir
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ rmdir sub-dir/
+rmdir: failed to remove 'sub-dir/': Directory not empty
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ rm ./sub-dir/prog.c 
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ rmdir sub-dir/
+
+
+2.6)
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ps
+    PID TTY          TIME CMD
+  11609 pts/0    00:00:00 bash
+  22664 pts/0    00:00:00 ps
+farouk@Ubuntu:~/Desktop/OS-LABS/os25-3342/Farouk_Belaid_LabForBeginners$ ps -A
+    PID TTY          TIME CMD
+      1 ?        00:00:04 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 pool_workqueue_release
+      4 ?        00:00:00 kworker/R-rcu_gp
+      5 ?        00:00:00 kworker/R-sync_wq
+      6 ?        00:00:00 kworker/R-slub_flushwq
+      7 ?        00:00:00 kworker/R-netns
+     10 ?        00:00:00 kworker/0:0H-events_highpri
+     12 ?        00:00:00 kworker/R-mm_percpu_wq
+     13 ?        00:00:00 rcu_tasks_kthread
+     14 ?        00:00:00 rcu_tasks_rude_kthread
+     15 ?        00:00:00 rcu_tasks_trace_kthread
+     16 ?        00:00:00 ksoftirqd/0
+     17 ?        00:00:08 rcu_preempt
+     18 ?        00:00:00 rcu_exp_par_gp_kthread_worker/0
+     19 ?        00:00:00 rcu_exp_gp_kthread_worker
+     20 ?        00:00:00 migration/0
+     21 ?        00:00:00 idle_inject/0
+     22 ?        00:00:00 cpuhp/0
+     23 ?        00:00:00 cpuhp/1
+     24 ?        00:00:00 idle_inject/1
+     25 ?        00:00:00 migration/1
+     26 ?        00:00:00 ksoftirqd/1
+     28 ?        00:00:00 kworker/1:0H-events_highpri
+     29 ?        00:00:00 cpuhp/2
+     30 ?        00:00:00 idle_inject/2
+     31 ?        00:00:00 migration/2
+     32 ?        00:00:00 ksoftirqd/2
+     34 ?        00:00:00 kworker/2:0H-kblockd
+     35 ?        00:00:00 cpuhp/3
+     36 ?        00:00:00 idle_inject/3
+     37 ?        00:00:00 migration/3
+     38 ?        00:00:00 ksoftirqd/3
+     40 ?        00:00:00 kworker/3:0H-kblockd
+     41 ?        00:00:00 kdevtmpfs
+     42 ?        00:00:00 kworker/R-inet_frag_wq
+     44 ?        00:00:00 kauditd
+     45 ?        00:00:00 khungtaskd
+     47 ?        00:00:00 oom_reaper
+     48 ?        00:00:00 kworker/R-writeback
+     49 ?        00:00:00 kcompactd0
+     50 ?        00:00:00 ksmd
+     51 ?        00:00:00 khugepaged
+     52 ?        00:00:00 kworker/R-kintegrityd
+     53 ?        00:00:00 kworker/R-kblockd
+     54 ?        00:00:00 kworker/R-blkcg_punt_bio
+     55 ?        00:00:00 irq/9-acpi
+     58 ?        00:00:00 kworker/R-tpm_dev_wq
+     59 ?        00:00:00 kworker/R-ata_sff
+     60 ?        00:00:00 kworker/R-md
+     61 ?        00:00:00 kworker/R-md_bitmap
+     62 ?        00:00:00 kworker/R-edac-poller
+     63 ?        00:00:00 kworker/R-devfreq_wq
+     64 ?        00:00:00 watchdogd
+     65 ?        00:00:00 kworker/0:1H-kblockd
+     66 ?        00:00:00 kswapd0
+     67 ?        00:00:00 ecryptfs-kthread
+     69 ?        00:00:00 kworker/R-kthrotld
+     70 ?        00:00:00 kworker/R-acpi_thermal_pm
+     71 ?        00:00:00 scsi_eh_0
+     72 ?        00:00:00 kworker/R-scsi_tmf_0
+     73 ?        00:00:00 scsi_eh_1
+     74 ?        00:00:00 kworker/R-scsi_tmf_1
+     78 ?        00:00:00 kworker/R-mld
+     79 ?        00:00:00 kworker/R-ipv6_addrconf
+     86 ?        00:00:00 kworker/R-kstrp
+     88 ?        00:00:00 kworker/u17:0-ttm
+    101 ?        00:00:00 kworker/R-charger_manager
+    104 ?        00:00:00 kworker/2:1H-kblockd
+    105 ?        00:00:01 kworker/1:1H-kblockd
+    158 ?        00:00:01 kworker/2:2-mm_percpu_wq
+    164 ?        00:00:00 scsi_eh_2
+    165 ?        00:00:00 kworker/R-scsi_tmf_2
+    212 ?        00:00:01 jbd2/sda2-8
+    213 ?        00:00:00 kworker/R-ext4-rsv-conversion
+    262 ?        00:00:00 systemd-journal
+    336 ?        00:00:00 systemd-udevd
+    479 ?        00:00:00 psimon
+    522 ?        00:00:00 kworker/R-cryptd
+    531 ?        00:00:03 systemd-oomd
+    532 ?        00:00:00 systemd-resolve
+    555 ?        00:00:00 kworker/3:2H-kblockd
+    566 ?        00:00:00 irq/18-vmwgfx
+    567 ?        00:00:00 kworker/R-ttm
+    825 ?        00:00:00 avahi-daemon
+    826 ?        00:00:03 dbus-daemon
+    831 ?        00:00:00 gnome-remote-de
+    852 ?        00:00:00 polkitd
+    853 ?        00:00:00 power-profiles-
+    859 ?        00:00:08 snapd
+    863 ?        00:00:00 accounts-daemon
+    867 ?        00:00:00 cron
+    868 ?        00:00:00 switcheroo-cont
+    870 ?        00:00:00 systemd-logind
+    871 ?        00:00:00 udisksd
+    875 ?        00:00:00 avahi-daemon
+    876 ?        00:00:00 rsyslogd
+   1016 ?        00:00:00 NetworkManager
+   1017 ?        00:00:00 wpa_supplicant
+   1042 ?        00:00:00 ModemManager
+   1180 ?        00:00:00 cupsd
+   1183 ?        00:00:00 unattended-upgr
+   1203 ?        00:00:00 kerneloops
+   1206 ?        00:00:00 kerneloops
+   1210 ?        00:00:00 gdm3
+   1223 ?        00:00:00 cups-browsed
+   1304 ?        00:00:00 rtkit-daemon
+   1418 ?        00:00:00 colord
+   1472 ?        00:00:00 upowerd
+   1787 ?        00:00:00 gdm-session-wor
+   1805 ?        00:00:01 systemd
+   1811 ?        00:00:00 (sd-pam)
+   1826 ?        00:00:01 pipewire
+   1827 ?        00:00:00 pipewire
+   1829 ?        00:00:00 wireplumber
+   1830 ?        00:00:00 pipewire-pulse
+   1835 ?        00:00:01 dbus-daemon
+   1836 ?        00:00:00 gnome-keyring-d
+   1872 ?        00:00:00 xdg-document-po
+   1876 ?        00:00:00 xdg-permission-
+   1883 ?        00:00:00 fusermount3
+   1940 tty2     00:00:00 gdm-wayland-ses
+   1945 tty2     00:00:00 gnome-session-b
+   2002 ?        00:00:00 gcr-ssh-agent
+   2003 ?        00:00:00 gnome-session-c
+   2015 ?        00:00:00 gvfsd
+   2025 ?        00:00:00 gvfsd-fuse
+   2028 ?        00:00:00 gnome-session-b
+   2067 ?        00:00:00 at-spi-bus-laun
+   2071 ?        00:31:37 gnome-shell
+   2078 ?        00:00:00 dbus-daemon
+   2139 ?        00:00:00 at-spi2-registr
+   2155 ?        00:00:00 gnome-shell-cal
+   2163 ?        00:00:00 gjs
+   2174 ?        00:00:11 ibus-daemon
+   2175 ?        00:00:00 gsd-a11y-settin
+   2179 ?        00:00:00 gsd-color
+   2183 ?        00:00:00 gsd-datetime
+   2184 ?        00:00:00 gsd-housekeepin
+   2189 ?        00:00:00 gsd-keyboard
+   2192 ?        00:00:00 gsd-media-keys
+   2197 ?        00:00:00 gsd-power
+   2199 ?        00:00:00 gsd-print-notif
+   2200 ?        00:00:00 gsd-rfkill
+   2201 ?        00:00:00 gsd-screensaver
+   2203 ?        00:00:00 gsd-sharing
+   2204 ?        00:00:00 gsd-smartcard
+   2205 ?        00:00:00 gsd-sound
+   2210 ?        00:00:00 gsd-wacom
+   2213 ?        00:00:00 gsd-disk-utilit
+   2220 ?        00:00:00 evolution-alarm
+   2325 ?        00:00:00 ibus-memconf
+   2326 ?        00:00:03 ibus-extension-
+   2341 ?        00:00:00 gsd-printer
+   2370 ?        00:00:00 ibus-portal
+   2381 ?        00:00:00 gvfs-udisks2-vo
+   2394 ?        00:00:00 gvfs-goa-volume
+   2395 ?        00:00:00 evolution-sourc
+   2404 ?        00:00:00 goa-daemon
+   2417 ?        00:00:00 goa-identity-se
+   2419 ?        00:00:00 gvfs-afc-volume
+   2430 ?        00:00:00 gvfs-mtp-volume
+   2435 ?        00:00:00 gvfs-gphoto2-vo
+   2448 ?        00:00:03 ibus-engine-sim
+   2486 ?        00:00:00 dconf-service
+   2497 ?        00:00:00 tracker-miner-f
+   2508 ?        00:00:00 evolution-calen
+   2511 ?        00:00:00 gjs
+   2531 ?        00:00:00 gvfsd-trash
+   2554 ?        00:00:00 evolution-addre
+   2648 ?        00:00:00 xdg-desktop-por
+   2654 ?        00:00:00 xdg-desktop-por
+   2655 ?        00:00:00 gvfsd-metadata
+   2677 ?        00:00:00 xdg-desktop-por
+   2701 ?        00:00:00 snapd-desktop-i
+   2759 ?        00:00:00 snapd-desktop-i
+   2825 ?        00:00:00 Xwayland
+   2829 ?        00:00:00 gsd-xsettings
+   2850 ?        00:00:00 ibus-x11
+   2852 ?        00:00:00 mutter-x11-fram
+   2910 ?        00:00:00 obexd
+   2928 ?        00:00:00 update-notifier
+   3567 ?        00:00:00 gvfsd-recent
+  10159 ?        00:17:49 firefox
+  10447 ?        00:00:00 Socket Process
+  10466 ?        00:00:07 Privileged Cont
+  10506 ?        00:00:00 snap
+  10668 ?        00:00:02 WebExtensions
+  10861 ?        00:00:06 Utility Process
+  10872 ?        00:01:15 Isolated Web Co
+  10891 ?        00:02:23 Isolated Web Co
+  11131 ?        00:04:29 Isolated Web Co
+  11415 ?        00:00:16 Isolated Web Co
+  11470 ?        00:00:11 RDD Process
+  11482 ?        00:00:01 speech-dispatch
+  11510 ?        00:00:00 sd_espeak-ng-mb
+  11525 ?        00:00:00 sd_espeak-ng
+  11528 ?        00:00:00 sd_dummy
+  11531 ?        00:00:00 sd_openjtalk
+  11600 ?        00:00:26 gnome-terminal-
+  11609 pts/0    00:00:00 bash
+  11712 ?        00:00:33 nautilus
+  11782 ?        00:00:01 fwupd
+  11876 ?        00:00:11 Isolated Web Co
+  13050 ?        00:00:00 psimon
+  18871 ?        00:00:00 kworker/R-iprt-VBoxWQueue
+  18892 ?        00:00:03 VBoxDRMClient
+  18894 ?        00:00:01 VBoxService
+  19399 ?        00:00:02 Isolated Web Co
+  19472 ?        00:01:11 Isolated Web Co
+  19926 ?        00:00:08 Isolated Web Co
+  19962 ?        00:00:01 Web Content
+  20068 ?        00:00:01 Web Content
+  20138 ?        00:00:00 kworker/3:3-events
+  20417 ?        00:00:00 kworker/0:3
+  20494 ?        00:00:00 gjs
+  20548 ?        00:00:00 kworker/u17:2
+  21024 ?        00:00:00 kworker/3:1-cgwb_release
+  21079 ?        00:00:22 kworker/u16:3-flush-8:0
+  21342 ?        00:00:00 kworker/1:1-cgroup_destroy
+  21898 ?        00:00:00 Web Content
+  21923 ?        00:00:00 kworker/0:1-events
+  21924 ?        00:00:00 kworker/1:0-events
+  21938 ?        00:00:13 kworker/u16:1-events_unbound
+  22096 ?        00:00:00 kworker/2:1-cgroup_destroy
+  22150 ?        00:00:07 kworker/u16:0-flush-8:0
+  22592 ?        00:00:00 kworker/2:0
+  22593 ?        00:00:00 kworker/2:3-cgroup_destroy
+  22597 ?        00:00:02 kworker/u16:2-events_power_efficient
+  22702 pts/0    00:00:00 ps
+
+Task 3:
+
